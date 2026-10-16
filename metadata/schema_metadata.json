@@ -1,0 +1,364 @@
+{
+    "category_translation": {
+        "columns": [
+            {
+                "name": "product_category_name",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "product_category_name_english",
+                "type": "TEXT",
+                "primary_key": false
+            }
+        ],
+        "description": "Portuguese to English product category names."
+    },
+    "customers": {
+        "columns": [
+            {
+                "name": "customer_id",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "customer_unique_id",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "customer_zip_code_prefix",
+                "type": "INTEGER",
+                "primary_key": false
+            },
+            {
+                "name": "customer_city",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "customer_state",
+                "type": "TEXT",
+                "primary_key": false
+            }
+        ],
+        "description": "Customer information including city and state."
+    },
+    "geolocation": {
+        "columns": [
+            {
+                "name": "geolocation_zip_code_prefix",
+                "type": "INTEGER",
+                "primary_key": false
+            },
+            {
+                "name": "geolocation_lat",
+                "type": "REAL",
+                "primary_key": false
+            },
+            {
+                "name": "geolocation_lng",
+                "type": "REAL",
+                "primary_key": false
+            },
+            {
+                "name": "geolocation_city",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "geolocation_state",
+                "type": "TEXT",
+                "primary_key": false
+            }
+        ],
+        "description": "ZIP code locations with latitude and longitude."
+    },
+    "order_items": {
+        "columns": [
+            {
+                "name": "order_id",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "order_item_id",
+                "type": "INTEGER",
+                "primary_key": false
+            },
+            {
+                "name": "product_id",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "seller_id",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "shipping_limit_date",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "price",
+                "type": "REAL",
+                "primary_key": false
+            },
+            {
+                "name": "freight_value",
+                "type": "REAL",
+                "primary_key": false
+            }
+        ],
+        "description": "Products purchased in each order, including prices."
+    },
+    "orders": {
+        "columns": [
+            {
+                "name": "order_id",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "customer_id",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "order_status",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "order_purchase_timestamp",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "order_approved_at",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "order_delivered_carrier_date",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "order_delivered_customer_date",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "order_estimated_delivery_date",
+                "type": "TEXT",
+                "primary_key": false
+            }
+        ],
+        "description": "Order information including status and dates."
+    },
+    "payments": {
+        "columns": [
+            {
+                "name": "order_id",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "payment_sequential",
+                "type": "INTEGER",
+                "primary_key": false
+            },
+            {
+                "name": "payment_type",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "payment_installments",
+                "type": "INTEGER",
+                "primary_key": false
+            },
+            {
+                "name": "payment_value",
+                "type": "REAL",
+                "primary_key": false
+            }
+        ],
+        "description": "Payment methods, amounts, and installments."
+    },
+    "products": {
+        "columns": [
+            {
+                "name": "product_id",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "product_category_name",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "product_name_lenght",
+                "type": "REAL",
+                "primary_key": false
+            },
+            {
+                "name": "product_description_lenght",
+                "type": "REAL",
+                "primary_key": false
+            },
+            {
+                "name": "product_photos_qty",
+                "type": "REAL",
+                "primary_key": false
+            },
+            {
+                "name": "product_weight_g",
+                "type": "REAL",
+                "primary_key": false
+            },
+            {
+                "name": "product_length_cm",
+                "type": "REAL",
+                "primary_key": false
+            },
+            {
+                "name": "product_height_cm",
+                "type": "REAL",
+                "primary_key": false
+            },
+            {
+                "name": "product_width_cm",
+                "type": "REAL",
+                "primary_key": false
+            }
+        ],
+        "description": "Product categories, weight, and dimensions."
+    },
+    "reviews": {
+        "columns": [
+            {
+                "name": "review_id",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "order_id",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "review_score",
+                "type": "INTEGER",
+                "primary_key": false
+            },
+            {
+                "name": "review_comment_title",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "review_comment_message",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "review_creation_date",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "review_answer_timestamp",
+                "type": "TEXT",
+                "primary_key": false
+            }
+        ],
+        "description": "Customer ratings and review comments."
+    },
+    "sellers": {
+        "columns": [
+            {
+                "name": "seller_id",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "seller_zip_code_prefix",
+                "type": "INTEGER",
+                "primary_key": false
+            },
+            {
+                "name": "seller_city",
+                "type": "TEXT",
+                "primary_key": false
+            },
+            {
+                "name": "seller_state",
+                "type": "TEXT",
+                "primary_key": false
+            }
+        ],
+        "description": "Seller information including city and state."
+    },
+    "relationships": [
+        {
+            "from_table": "orders",
+            "from_column": "customer_id",
+            "to_table": "customers",
+            "to_column": "customer_id"
+        },
+        {
+            "from_table": "order_items",
+            "from_column": "order_id",
+            "to_table": "orders",
+            "to_column": "order_id"
+        },
+        {
+            "from_table": "order_items",
+            "from_column": "product_id",
+            "to_table": "products",
+            "to_column": "product_id"
+        },
+        {
+            "from_table": "order_items",
+            "from_column": "seller_id",
+            "to_table": "sellers",
+            "to_column": "seller_id"
+        },
+        {
+            "from_table": "payments",
+            "from_column": "order_id",
+            "to_table": "orders",
+            "to_column": "order_id"
+        },
+        {
+            "from_table": "reviews",
+            "from_column": "order_id",
+            "to_table": "orders",
+            "to_column": "order_id"
+        },
+        {
+            "from_table": "products",
+            "from_column": "product_category_name",
+            "to_table": "category_translation",
+            "to_column": "product_category_name"
+        }
+    ],
+    "business_rules": [
+        "Use SQLite SQL syntax.",
+        "Use only SELECT queries to read data.",
+        "Use delivered orders when calculating completed sales.",
+        "Calculate item sales using order_items.price.",
+        "Do not include freight_value in item sales unless requested.",
+        "Use COUNT(DISTINCT order_id) when counting unique orders.",
+        "Use customers.customer_unique_id for unique customer counts.",
+        "An order may have multiple items, payments, or reviews.",
+        "Avoid double counting when joining multiple one-to-many tables.",
+        "Use category_translation for English product category names.",
+        "Geolocation may contain multiple rows per ZIP code. Do not join it directly for counting customers or sellers."
+    ]
+}

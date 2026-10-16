@@ -1,0 +1,23 @@
+# Chatbot interface
+streamlit
+
+# Data processing
+pandas
+
+# Gemini AI
+google-genai
+
+# LangGraph orchestration and memory
+langgraph
+
+# SQL validation
+sqlglot
+
+# Charts and visualization
+plotly
+
+# Environment variables
+python-dotenv
+
+# Testing
+pytest

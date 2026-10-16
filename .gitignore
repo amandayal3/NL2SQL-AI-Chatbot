@@ -1,0 +1,28 @@
+# Python virtual environment
+.venv/
+
+# Secret API keys
+.env
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# Mac temporary files
+.DS_Store
+
+# Local SQLite database
+database/*.db
+database/*.db-*
+
+# Raw and cleaned datasets
+data/raw/*
+data/processed/*
+
+# Keep data folders in Git
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Test and development cache
+.pytest_cache/
+.streamlit/
